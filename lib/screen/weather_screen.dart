@@ -12,10 +12,13 @@ class _WeatherHomeScreenState extends State<WeatherHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Weather App'),
+        title: const Text('Weather App', style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
-        actions: const [
-          Icon(Icons.refresh),
+        actions:[
+          IconButton(onPressed: (){
+             print('refresh button clicked');
+          }, icon:Icon(Icons.refresh) ),
+        
           SizedBox(width: 10),
         ],
       ),
